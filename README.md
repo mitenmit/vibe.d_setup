@@ -1,4 +1,4 @@
-vibedsetup
+Vibe.d setup
 ==========
 
 ##Goal of this guide
