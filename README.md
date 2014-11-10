@@ -29,17 +29,7 @@ This is a guide on how to quickly install dub and vibe.d on Ubuntu!
   ```Linux
   sudo apt-get install dub
   ```
-  
-##Start new vibe.d project
-  
-Then you can easily starting a new vibe.d project.
-  
-  ```Linux
-  dub init <name> vibe.d
-  cd <name>
-  dub
-  ```
-  
+
 ##Additional setup on Linux (Debian/Ubuntu/Mint)
   
   ```Linux
@@ -51,6 +41,21 @@ Then you can easily starting a new vibe.d project.
   ```Linux
   sudo apt-get install g++ gcc-multilib xdg-utils
   ```
+  
+##Start new vibe.d project
+  
+Then you can easily starting a new vibe.d project.
+  
+  ```Linux
+  dub init <name> vibe.d
+  cd <name>
+  dub
+  ```
+
+##Additional resources
+
+The official vibe.d repository - https://github.com/rejectedsoftware/vibe.d
+
   
   
   
