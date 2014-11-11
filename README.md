@@ -72,7 +72,7 @@ The official vibe.d repository - https://github.com/rejectedsoftware/vibe.d
       
       # http://site/public/js/file.js will reffer to /vibedproject/public/js/file.js
       location ~ ^/public/((images/|css/|js/).*)$ {
-        alias /path/to/project/[public]/$1;
+        alias /path/to/project/public/$1;
         access_log off;
         expires max;
       }
