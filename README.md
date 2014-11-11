@@ -56,8 +56,27 @@ Then you can easily starting a new vibe.d project.
 
 The official vibe.d repository - https://github.com/rejectedsoftware/vibe.d
 
+#Setup NGINX as web proxy
+
+  For security reasons it is good to setup NGINX as a web proxy for your vibe.d server. Here is how you can configure NGINX to proxy the http requests to vibe.d and also make NGINX serve the static resources like images, css and js files. The config file for NGINX is in /etc/nginx/sites-available or in /etc/nginx/conf.d
   
-  
-  
+    server {
+      listen 80;
+      server_name dev.mysite.com;
+
+      location / {
+        #if your vibe.d is listening on port 8080
+        proxy_pass http://localhost:8080/;
+        proxy_redirect off;
+      }
+      
+      # http://site/public/js/file.js will reffer to /vibedproject/public/js/file.js
+      location ~ ^/public/((images/|css/|js/).*)$ {
+        alias /path/to/project/[public]/$1;
+        access_log off;
+        expires max;
+      }
+    }
+
   
   
